@@ -1,0 +1,52 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte da página como Arial, com uma alternativa sans-serif */
+    background-color: #f4f4f4; /* Define uma cor de fundo clara para a página */
+    margin: 20px; /* Adiciona uma margem de 20 pixels ao redor do conteúdo da página */
+}
+
+/* Estilo do título principal (h1) */
+h1 {
+    text-align: center; /* Centraliza o texto do título na página */
+    color: #333; /* Define uma cor escura para o texto, garantindo bom contraste com o fundo */
+}
+
+/* Estilo do contêiner que exibe as questões */
+#question-container {
+    margin-top: 20px; /* Adiciona um espaço de 20 pixels acima do contêiner de questões */
+    background-color: #fff; /* Define um fundo branco para destacar as questões */
+    padding: 10px; /* Adiciona um espaçamento interno de 10 pixels ao redor do conteúdo */
+    border-radius: 5px; /* Arredonda os cantos do contêiner para um visual mais suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil para dar profundidade ao contêiner */
+}
+
+/* Estilo dos botões de resposta */
+button {
+    margin-right: 5px; /* Adiciona um espaço de 5 pixels à direita dos botões para separá-los */
+}
+
+/* Estilo do contêiner que exibe os resultados das respostas */
+#result {
+    margin-top: 20px; /* Adiciona um espaço de 20 pixels acima do contêiner de resultados */
+}
+
+/* Estilo do botão de voltar */
+.button-container {
+    margin-top: 40px; /* Espaçamento para colocar o botão mais para baixo */
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

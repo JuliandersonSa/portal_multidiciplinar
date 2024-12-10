@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões: Conjuntos</title>
+    <link rel="stylesheet" href="questoes_matematica.css">
+</head>
+<body>
+    <h1>Conjuntos</h1>
+    <div id="question-container"></div>
+    <div>
+        <button onclick="submitAnswer('A')">A</button>
+        <button onclick="submitAnswer('B')">B</button>
+        <button onclick="submitAnswer('C')">C</button>
+        <button onclick="submitAnswer('D')">D</button>
+    </div>
+    <div id="result"></div>
+    <button id="next-button" onclick="nextQuestion()" style="display: none;">Próxima Questão</button>
+<button id="voltar-button" onclick="window.location.href='disciplinas_matematica.html'">
+    Clique aqui para voltar
+</button>
+
+    <script>
+        const questions = [
+            {
+                question: "(0001) Uma pesquisa foi realizada com 1200 pessoas, sendo 650 homens e 550 mulheres. Do total de entrevistados identificou-se que 750 estão trabalhando; 500 têm ensino médio completo e, 400 estão trabalhando e têm ensino médio completo. Dentre as mulheres entrevistadas foi ideentificado que 350 estão trabalhando; 200 têm o ensino médio completo e, 100 estão trabalhando e têm ensino médio completo. Considerando essas informações, a quantidade de homens que não estão trabalhando e não têm o ensino médio completo é de:",
+                options: { A: "100", B: "150", C: "250", D: "200" },
+                answer: "C",
+                comment: "Resposta: letra C",
+                image: "imagens_conjuntos/0001.jpg"
+            },
+            {
+                question: "(0002) Uma agẽncia de viagens realizou uma pesquisa com 51 pessoas sobre o tipo de turismo que apreciavam na região do Sridó Potiguar. Foram propostas três opções: Cultural, Esportivo e Gastronômico. Nove pessoas escolheram os três tipos de turismo. Quatorze pessoas escolheram apenas os turismos Cultural e Esportivo e dez entrevistados escolheram apenas os turismos Esportivo e Gastronômico. Sabendo que nenhum dos entrevistados escolheu apenas um dos tipos de turismo, e que quinze pessoas não escolheram nenhuma das opções propostas, o número de pessoas que optou pelo turismo gastronômico foi igual a:",
+                options: { A: "19", B: "21", C: "18", D: "22" },
+                answer: "D",
+                comment: "Resposta: letra D",
+                image: "imagens_conjuntos/0002.jpg"
+            },
+            {
+                question: "(0003) No supermercado JARDIM foi realizada uma pesquisa com 99 consumidores para identificar os refrigerantes que consomem dentre três sabores: COQ, PEP e GUA. Entre os pesquisados, 40 bebem COQ, 20 consomem COQ e PEP, 22 bebem PEP e GUA, 18 consomem COQ e GUA e 11 bebem os três sabores. Se a quantidade de consumidores que bebem COQ é a mesma que bebem GUA, o número de entrevistados bebem GUA e não bebem COQ é igual a:",
+                options: { A: "20", B: "16", C: "11", D: "22" },
+                answer: "D",
+                comment: "Resposta: letra D",
+                image: "imagens_conjuntos/0003.jpg"
+            },
+			{
+				question: "(0004) Em uma turma de 40 alunos de uma escola de Junco do Seridó/PB, uma professora quer separar a turma em 8 grupos, com a mesma quantidade de componentes, para realizar uma atividade. Nesse caso, o número de pessoas em cada grupo será:",
+                options: { A: "4", B: "6", C: "7", D: "5" },
+                answer: "D",
+                comment: "Resposta: letra D",
+                image: "imagens_conjuntos/0004.jpg"
+			},
+			{
+				question: "(0005) Numa pesquisa para decidir o nome da mascote de um campeonato de futebol, foram propostas duas opções: MAXIXE e BUCHADA. Os entrevistados podiam votar em uma das opções ou nas duas. Sabendo que, das 128 pessoas que responderam à pesquisa, 78 votaram em MAXIXE e 73 votaram em BUCHADA, votaram nas duas opções o total de:",
+				options: { A: "25 pessoas", B: "21 pessoas", C: "23 pessoas", D: "27 pessoas" },
+                answer: "C",
+                comment: "Resposta: letra C",
+                image: "imagens_conjuntos/0005.jpg"
+			},
+			{
+				question: "(0006) As prefeituras de São Tomé e Bom Jesus pretendem comprar, em conjunto, letreiros com as seguintes frases: “Eu Amo São Tomé” e “Eu Amo Bom Jesus”. Sabendo que cada letra que for confeccionada apenas uma vez custa R$ 200,00, cada letra que for confeccionada duas vezes custa R$ 180,00, cada letra confeccionada três ou mais vezes custa R$ 160,00, e que a empresa não considera os acentos, o custo total da encomenda conjunta, em reais, será de:",
+				options: { A: "R$ 4340,00", B: "R$ 4180,00", C: "R$ 4120,00", D: "R$ 4260,00" },
+                answer: "C",
+                comment: "Resposta: letra C",
+                image: "imagens_conjuntos/0006.jpg"
+			},
+			{	question: "(0007) Considere que os municípios de São Tomé e Bom Jesus têm, juntos, 15 ambulâncias à disposição para atender seus moradores. Após o município de Bom Jesus adquirir 3 novas ambulâncias, este passaria a ter 2 ambulâncias a mais que o município de São Tomé. Nessas condições, o número de ambulâncias do município de São Tomé era:",
+				options: { A: "8", B: "7", C: "6", D: "9" },
+                answer: "A",
+                comment: "Resposta: letra A",
+                image: "imagens_conjuntos/0007.jpg"
+			},
+			{
+				question: "(0008) Ao analisar os cargos de liderança do setor financeiro, revelam-se também situações de preconceito racial relevante. Enquanto o salário médio de um homem branco, em cargos do setor bancário, é de R$ 10.200,00, o de uma mulher negra, no mesmo setor, é de R$ 5.900,00. Para igualar a remuneração dos dois de maneira justa, será necessário adicionar um valor ao menor salário e subtrair do maior salário a mesma quantia que foi somada ao salário da mulher negra. caso, a soma dos dígitos desse valor único, o qual deverá ser, respectivamente, somado e subtraído ao menor e maior salário será:",
+				options: { A: "6", B: "7", C: "8", D: "9" },
+                answer: "C",
+                comment: "Resposta: letra C",
+                image: "imagens_conjuntos/0008.jpg"
+			},
+			{
+				question: "(0009) operação divisão (Figura 1), cujo divisor é 23, o quociente igual a 22 e o resto dessa divisão é o maior possível, é correto afirmar que a soma dos algarismos do dividendo é:",
+				options: { A: "14", B: "15", C: "16", D: "17" },
+                answer: "B",
+                comment: "Resposta: letra B",
+                image: "imagens_conjuntos/0009.jpg"
+			},
+			{	
+				question: "(0010) Dois coveiros escavam 30 sepulturas em 2 dias. Se mais dois coveiros forem contratados e a nova equipe mantiver a produtividade, o número de sepulturas que serão escavadas em 3 dias será:",
+				options: { A: "90", B: "80", C: "70", D: "60" },
+                answer: "A",
+                comment: "Resposta: letra A",
+                image: "imagens_conjuntos/0010.jpg"
+			},
+			{
+				question: "(0011) Um determinado número natural é formado por três dígitos: a centena é 7; a dezena, 5; e a unidade, U, ou seja, o número 75U. Sabendo que esse número é divisível por 3, a soma dos possíveis valores que podem ocupar o lugar de U é",
+				options: { A: "12", B: "10", C: "18", D: "8" },
+				answer: "C",
+				comment: "Resposta: letra C",
+				image: "imagens_conjuntos/0011.jpg"
+			},
+			{
+				question: "(0012) Uma loja de material de construção, em Junco do Seridó/PB, vende parafusos em embalagens com 15 unidades e buchas para parafusos em embalagens com 6 unidades. A menor quantidade de embalagens que uma pessoa deve comprar, considerando buchas e parafusos, para que se tenha a mesma quantidade de cada um deles, é",
+				options: { A: "4 embalagens de parafusos e 8 embalagens de buchas.", B: "2 embalagens de parafusos e 5 embalagens de buchas.", C: "5 embalagens de parafusos e 3 embalagens de buchas.", D: "4 embalagens de parafusos e 10 embalagens de buchas." },
+				answer: "B",
+				comment: "Resposta: letra B",
+				image: "imagens_conjuntos/0012.jpg"
+			},
+			{
+				question: "(0013) Sabendo que o número 42k2 é divisível por 9, o algarismo que substitui corretamente a letra k é",
+				options: { A: "1.", B: "2.", C: "3.", D: "4." },
+				answer: "A",
+				comment: "Resposta: letra A",
+				image: "imagens_conjuntos/0013.jpg"
+			},
+			{
+				question: "(0014) Uma máquina de café está com 3/5 de sua capacidade. Sabendo que o café é vendido em copos com capacidade para 1/50 do reservatório da máquina, marque a opção que aponta quantos copos de café podem ser vendidos com o café que ainda resta no reservatório.",
+				options: { A: "50", B: "40", C: "30", D: "60" },
+				answer: "C",
+				comment: "Resposta: letra C",
+				image: "imagens_conjuntos/0014.jpg"
+			},
+			{
+				question: "(0015) Se a = 0,9.1,25 e b =1,8.2,50, então a - b é igual a:",
+				options: { A: "-3,375.", B: "3,375.", C: "6,75.", D: "-33,75." },
+				answer: "A",
+				comment: "Resposta: letra A",
+				image: "imagens_conjuntos/0015.jpg"
+			},
+			{
+				question: "(0016) Considere o conjunto A={11; -9,7; 0,131131113...; 0,444...; 0,2; 3,141592...}. O subconjunto de A cujos elementos são números racionais é:",
+				options: { A: "{-9,7; 0,2; 11; 0,444...}.", B: "{3,141592...; 0,131131113...; 0,444...}.", C: "{-9,7; 0,2; 11; 0,131131113...; 0,444...}.", D: "{0,2; 3,141592...; 0,131131113...; -9,7; 0,444...}." },
+				answer: "A",
+				comment: "No conjunto <b>''A''</b> os elementos que são racionais incluem:<br><b>11</b> (inteiro);<br><b>-9,7</b> (decimal finito);<br><b>0,2</b> (decimal finito);<br><b>0,444...</b> (dizima periódica).<br>Os números <b>0,131131113...</b> e <b>3,141592... são irracionais, pois suas representações decimais não são periódicas.</b><br><br>Resposta: letra A",
+				image:"",
+			},
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        const maxQuestions = Math.min(100, questions.length);
+        let askedQuestions = [];
+
+        function loadQuestion() {
+            if (currentQuestionIndex < maxQuestions) {
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * questions.length);
+                } while (askedQuestions.includes(randomIndex));
+
+                askedQuestions.push(randomIndex);
+                const question = questions[randomIndex];
+
+                const questionContainer = document.getElementById('question-container');
+                questionContainer.innerHTML = `
+                    <strong>Questão ${currentQuestionIndex + 1}:</strong> ${question.question}
+                    <ul>
+                        <li>A) ${question.options.A}</li>
+                        <li>B) ${question.options.B}</li>
+                        <li>C) ${question.options.C}</li>
+                        <li>D) ${question.options.D}</li>
+                    </ul>
+                `;
+                
+                questionContainer.classList.add('fade-in'); // Animação ao carregar a pergunta
+
+                document.getElementById('result').innerHTML = "";
+                document.getElementById('next-button').style.display = 'none'; // Oculta o botão "Próxima Questão"
+            } else {
+                showResult();
+            }
+        }
+
+        function submitAnswer(selected) {
+            const question = questions[askedQuestions[currentQuestionIndex]];
+            const result = document.getElementById('result');
+
+            if (selected === question.answer) {
+                score++;
+                result.innerHTML = "<strong style='color: green;'>Correto!</strong><br>";
+            } else {
+                result.innerHTML = "<strong style='color: red;'>Incorreto!</strong><br>";
+            }
+
+            result.innerHTML += `<img src="${question.image}" alt="Explicação:" style="max-width: 300px;"/>`;
+            result.innerHTML += `<p>${question.comment}</p>`;
+
+            result.classList.add('fade-in'); // Animação de resultado
+            document.getElementById('next-button').style.display = 'block'; // Exibe o botão "Próxima Questão"
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            loadQuestion();
+        }
+
+        function showResult() {
+            const result = document.getElementById('result');
+            const percentage = (score / maxQuestions) * 100;
+            result.innerHTML = `Você respondeu ${score} de ${maxQuestions} questões corretamente. Sua porcentagem de acerto é ${percentage.toFixed(2)}%.`;
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('next-button').style.display = 'none';
+        }
+
+        loadQuestion(); // Carrega a primeira pergunta ao iniciar
+    </script>
+</body>
+</html>
+

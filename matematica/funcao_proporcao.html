@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões: Conjuntos</title>
+    <link rel="stylesheet" href="questoes_matematica.css">
+</head>
+<body>
+    <h1>Funções e Proporções</h1>
+    <div id="question-container"></div>
+    <div>
+        <button onclick="submitAnswer('A')">A</button>
+        <button onclick="submitAnswer('B')">B</button>
+        <button onclick="submitAnswer('C')">C</button>
+        <button onclick="submitAnswer('D')">D</button>
+    </div>
+    
+    <div id="result"></div>
+    <button id="next-button" onclick="nextQuestion()" style="display: none;">Próxima Questão</button>
+<button id="voltar-button" onclick="window.location.href='disciplinas_matematica.html'">
+    Clique aqui para voltar
+</button>
+
+    <script>
+        const questions = [
+            {
+               question: "(001) Quatro funcionários da CAERN com idades x, y, z e w, do mais novo para o mais velho, respectivamente, decidiram criar um enigma relacionado às suas idades e lançaram um desafio aos outros colegas de trabalho.<br><b>Enigma:</b> a soma das idades dos mais novos é 62 e a dos mais velhos é 95. Então, o valor da expressão xz + yz + xw + yw é:",
+               options: { A: "33.", B: "157.", C: "3.211.", D: "5.890." },
+               answer: "D",
+               comment: "Resposta: letra D",
+               image: "imagens_funcao_proporcao/001.jpg",
+			},
+			{
+               question: "(002) Em uma festa de aniversário, um grupo formado por cinco homens e três mulheres comeram, juntos, 54 salgadinhos. Sabendo que cada homem comeu o triplo de salgadinhos de cada mulher, um outro grupo formado por cinco mulheres e três homens que se alimente nas mesmas proporções comeria uma quantidade de salgadinhos igual a",
+               options: { A: "42.", B: "48.", C: "52.", D: "54." },
+               answer: "A",
+               comment: "Resposta: letra A",
+               image: "imagens_funcao_proporcao/002.jpg",
+			},
+			{
+               question: "(003) A lei de cotas foi uma conquista para a democratização do acesso à universidade pública. Seguindo essa prerrogativa, uma determinada universidade destinou, nos últimos 3 anos, um total de 1 848 vagas para estudantes pretos, pardos ou indígenas. <br>Considerando que essa proporção se mantenha por mais 8 anos, o total do número de vagas (nos 11 anos) destinadas para essas categorias será de",
+               options: { A: "6 776.", B: "4 928.", C: "8 435.", D: "2 221." },
+               answer: "A",
+               comment: "Resposta: letra A",
+               image: "imagens_funcao_proporcao/003.jpg",
+			},
+			{
+               question: "(004) Uma pesquisa estatística realizada pela prefeitura de Natal, acerca de um projeto para a redução de ataques em escolas identificou que 3 psicólogos auxiliaram na conscientização de 1345 alunos. Sabendo que a prefeitura precisa atender a 24548 alunos no projeto, seguindo essa mesma proporção, a quantidade mínima de psicólogos necessários para o cumprimento dessa meta é",
+               options: { A: "52.", B: "48.", C: "59.", D: "55." },
+               answer: "D",
+               comment: "Resposta: letra D",
+               image: "imagens_funcao_proporcao/004.jpg",
+			},
+			{
+               question: "(005) Suponha que pesquisas apontam que com 3.432 pessoas trabalhando cerca de 8 h por dia, para a erradicação do desmatamento na Amazônia, a área desmatada foi de 10.781 km2 nos últimos 12 meses. Se a proporção de trabalho para combater o desmatamento for mantida, ao aumentar o número de trabalhadores para 4.000 mil, com carga horária de 10h diárias, ao final de 1 anos, a área desmatada será de",
+               options: { A: "7.400.", B: "7.200.", C: "7.000.", D: "6.800." },
+               answer: "A",
+               comment: "Resposta: letra A",
+               image: "imagens_funcao_proporcao/005.jpg",
+			},
+			{
+               question: "(006) Um professor de matemática vai dividir um valor entre suas filhas, Maria e Marta, em proporções diretas a 3 e 2, respectivamente. O pai informa às filhas que cinco vezes o valor que Maria receberá menos três vezes o valor que Marta receberá é igual a R$ 1.800,00. Sendo assim, o pai dividirá entre as filhas um valor de",
+               options: { A: "R$ 1.800,00.", B: "R$ 800,00.", C: "R$ 1.000,00.", D: "R$ 1.500,00." },
+               answer: "C",
+               comment: "Resposta: letra C",
+               image: "imagens_funcao_proporcao/006.jpg",
+			},
+			{
+               question: "(007) Um fazendeiro deixou de herança R$ 382.000,00 para seus três netos. No testamento, colocou como regra que o valor que cada um receberia deveria ser inversamente proporcional a suas idades. Se os netos tinham idade de 36, 32 e 28 anos, o mais novo recebeu de herança",
+               options: { A: "R$ 144.000,00.", B: "R$ 112.000,00.", C: "R$ 126.000,00.", D: "R$ 158.000,00." },
+               answer: "A",
+               comment: "Resposta: letra A",
+               image: "imagens_funcao_proporcao/007.jpg",
+			},
+			{
+               question: "(008) Um estudo realizado por um engenheiro florestal identificou que para reflorestar uma certa área desmatada da Amazônia, seriam necessários 36 homens, trabalhando no mesmo ritmo durante 25 dias. Para realizar o mesmo trabalho, em apenas 20 dias, aplicando o mesmo ritmo de trabalho, seriam necessários um total de",
+               options: { A: "40 homens.", B: "42 homens.", C: "43 homens.", D: "45 homens." },
+               answer: "D",
+               comment: "Resposta: letra D",
+               image: "imagens_funcao_proporcao/008.jpg",
+			},
+			{
+               question: "(009) Em uma exposição de fotografias sobre o bioma amazônico, 300 pessoas estavam no salão da exposição quando a portaria percebeu que, a cada 2 min, 4 pessoas saíam e 2 entravam. Considerando esse fluxo de pessoas, o tempo para a exposição ficar vazia será de",
+               options: { A: "4 horas.", B: "6 horas.", C: "5 horas.", D: "7 horas." },
+               answer: "C",
+               comment: "Resposta: letra C",
+               image: "imagens_funcao_proporcao/009.jpg",
+			},
+			{
+               question: "(010) Alguns especialistas recomendam que as máscaras descartáveis sejam trocadas a cada 3 horas. A função que indica a quantidade de máscaras y que devem ser compradas em função do número de horas x que uma pessoa deve usar máscara é",
+               options: { A: "y = x/3", B: "y = 3x", C: "y = x/4", D: "y = 4x" },
+               answer: "A",
+               comment: "Resposta: letra A",
+               image: "imagens_funcao_proporcao/010.jpg",
+			},
+			{
+               question: "(011) Roberto é vendedor de uma loja de produtos eletrônicos. Seu salário mensal é composto de um valor fixo de R$ 1.700,00 e de uma comissão de 4% sobre o total de suas vendas mensais, em reais. A expressão que relaciona o salário mensal de Roberto ao total de suas vendas é S = 1700 + 0,04.V. Se em um determinado mês o salário de Roberto foi de R$ 2.520,00, o valor das vendas efetuadas por ele durante este mês foi de:",
+               options: { A: "R$ 20 800,00.", B: "R$ 20 500,00.", C: "R$ 21 300,00.", D: "R$ 19 850,00." },
+               answer: "B",
+               comment: "Resposta: letra B",
+               image: "imagens_funcao_proporcao/011.jpg",
+			},
+			{
+               question: "(012) Buscando amparar as vítimas de ataques em escolas, a gestão de uma certa cidade está disponibilizando psicólogos para realização de tratamento domiciliar. Para o pagamento desses profissionais, a gestão fez um contrato que fixa o valor da visita em R$ 80,00, acrescidos de 25 reais para cada 15 minutos de tratamento. A expressão que apresenta o valor a ser pago em função das horas trabalhadas é",
+               options: { A: "y = 25x + 80", B: "y = 15x + 80", C: "y = 100x + 80", D: "y = 80x + 25" },
+               answer: "C",
+               comment: "Resposta: letra C",
+               image: "imagens_funcao_proporcao/012.jpg",
+			},
+			{
+               question: "(013) Uma escola promoveu uma campanha para a arrecadação de alimentos não perecíveis, na qual se envolveram, inicialmente, 60 alunos. Durante 30 dias, estes alunos se dedicaram à arrecadação dos produtos a serem doados a uma comunidade carente situada no entorno da escola. Nos primeiros 10 dias, os alunos trabalharam 4 horas diárias, arrecadando 15 kg de alimentos por dia. Esse resultado motivou 40 novos alunos a se juntarem ao grupo inicial. A partir de então, todo o grupo passou a trabalhar 6 horas por dia, até o final da campanha. <br>Considerando-se que o ritmo do trabalho de coleta tenha se mantido constante, a quantidade arrecadada de alimentos ao final da campanha foi de",
+               options: { A: "600 kg.", B: "700 kg.", C: "800 kg.", D: "900 kg." },
+               answer: "D",
+               comment: "Resposta: letra D",
+               image: "imagens_funcao_proporcao/013.jpg",
+			},
+			{
+               question: "(014) Para fazer o aterramento de uma área, 16 operários utilizariam 120 horas de trabalho. Para realizar a obra, a construtora decidiu contratar mais 8 operários. Considerando que todos os operários têm a mesma força de trabalho, com o novo total de operários a obra será realizada em",
+               options: { A: "60 horas.", B: "100 horas.", C: "80 horas.", D: "180 horas." },
+               answer: "C",
+               comment: "Resposta: letra C",
+               image: "imagens_funcao_proporcao/014.jpg",
+			},
+			];
+			
+			let currentQuestionIndex = 0;
+			let score = 0;
+			const maxQuestions = Math.min(100, questions.length);
+			let askedQuestions = [];
+
+			function loadQuestion() {
+				if (currentQuestionIndex < maxQuestions) {
+					let randomIndex;
+					do {
+						randomIndex = Math.floor(Math.random() * questions.length);
+					} while (askedQuestions.includes(randomIndex));
+
+					askedQuestions.push(randomIndex);
+					const question = questions[randomIndex];
+
+					const questionContainer = document.getElementById('question-container');
+					questionContainer.innerHTML = `
+						<strong>Questão ${currentQuestionIndex + 1}:</strong> ${question.question}
+						<ul>
+							<li>A) ${question.options.A}</li>
+							<li>B) ${question.options.B}</li>
+							<li>C) ${question.options.C}</li>
+							<li>D) ${question.options.D}</li>
+						</ul>
+					`;
+					
+					questionContainer.classList.add('fade-in'); // Animação ao carregar a pergunta
+
+					document.getElementById('result').innerHTML = "";
+					document.getElementById('next-button').style.display = 'none'; // Oculta o botão "Próxima Questão"
+				} else {
+					showResult();
+				}
+			}
+
+			function submitAnswer(selected) {
+				const question = questions[askedQuestions[currentQuestionIndex]];
+				const result = document.getElementById('result');
+
+				if (selected === question.answer) {
+					score++;
+					result.innerHTML = "<strong style='color: green;'>Correto!</strong><br>";
+				} else {
+					result.innerHTML = "<strong style='color: red;'>Incorreto!</strong><br>";
+				}
+
+				result.innerHTML += `<img src="${question.image}" alt="Explicação:" style="max-width: 300px;"/>`;
+				result.innerHTML += `<p>${question.comment}</p>`;
+
+				result.classList.add('fade-in'); // Animação de resultado
+				document.getElementById('next-button').style.display = 'block'; // Exibe o botão "Próxima Questão"
+			}
+
+			function nextQuestion() {
+				currentQuestionIndex++;
+				loadQuestion();
+			}
+
+			function showResult() {
+				const result = document.getElementById('result');
+				const percentage = (score / maxQuestions) * 100;
+				result.innerHTML = `Você respondeu ${score} de ${maxQuestions} questões corretamente. Sua porcentagem de acerto é ${percentage.toFixed(2)}%.`;
+				document.getElementById('question-container').style.display = 'none';
+				document.getElementById('next-button').style.display = 'none';
+			}
+
+			loadQuestion(); // Carrega a primeira pergunta ao iniciar
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Título das matérias */
+.titulo-materias {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Efeito de animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cartões de matérias */
+.materias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cartao {
+    background: #fff;
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartao a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .materias {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilo do botão de voltar */
+.button-container {
+    margin-top: 40px; /* Espaçamento para colocar o botão mais para baixo */
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+

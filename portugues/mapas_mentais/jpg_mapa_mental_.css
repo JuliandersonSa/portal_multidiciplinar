@@ -1,0 +1,48 @@
+/* Estilo do contêiner que organiza a imagem */
+.map-container {
+  text-align: center; /* Centraliza a imagem horizontalmente */
+  margin: 20px auto; /* Adiciona margem ao redor */
+  max-width: 90%; /* Limita a largura a 90% da tela para manter a responsividade */
+  overflow: hidden; /* Garante que nada fora do contêiner seja visível */
+}
+
+/* Estilo padrão da imagem */
+.mapa-mental {
+  width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+  max-width: 1200px; /* Limita o tamanho máximo da imagem a 1200px */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Adiciona uma transição suave para transformações */
+}
+
+/* Estilo para o modo fullscreen (imagem ampliada) */
+.mapa-mental.fullscreen {
+  position: fixed; /* Faz a imagem "flutuar" acima de outros elementos */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%) scale(1.5); /* Centraliza e amplia a imagem */
+  z-index: 1000; /* Garante que a imagem fique acima de todos os elementos */
+  background: rgba(0, 0, 0, 0.8); /* Adiciona um fundo escuro semitransparente */
+  width: auto; /* Permite que a largura seja ajustada automaticamente */
+  height: auto; /* Permite que a altura seja ajustada automaticamente */
+  max-width: 90%; /* Limita a largura máxima no modo fullscreen */
+  max-height: 90%; /* Limita a altura máxima no modo fullscreen */
+}
+
+/* Estilo do botão de voltar */
+.button-container {
+    margin-top: 40px; /* Espaçamento para colocar o botão mais para baixo */
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
