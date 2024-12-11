@@ -2,6 +2,7 @@ const flashcards = document.querySelector(".flashcards");
 const cardForm = document.querySelector(".card-form");
 const question = document.querySelector("#question");
 const answer = document.querySelector("#answer");
+const filterInput = document.querySelector("#filter");
 
 let id = 0;
 
@@ -26,10 +27,15 @@ function removeAll() {
 }
 
 function save() {
+  const subject = document.querySelector("#subject").value;
+  const topic = document.querySelector("#topic").value;
+	
   if (question.value.length >= 1 && answer.value.length >= 1) {
     let flashcardInfo = {
       question: question.value,
       answer: answer.value,
+      subject: subject || "Geral",
+      topic: topic || "Geral",
       id: id,
     };
 
@@ -39,11 +45,14 @@ function save() {
     addCard(myLocal[myLocal.length - 1]);
     question.value = "";
     answer.value = "";
+    document.querySelector("#subject").value = "";
+    document.querySelector("#topic").value = "";
   }
 }
 
 myLocal.forEach(addCard);
 
+// Adicionar flashcards ao DOM ao carregar ou criar
 function addCard(card) {
   cardForm.style.display = "none";
 
@@ -54,9 +63,13 @@ function addCard(card) {
     let btn = document.createElement("button");
     let remove = document.createElement("span");
     let number = document.createElement("span");
+    let subject = document.createElement("p");
+    let topic = document.createElement("p");
 
     div.className = "flashcard";
     div.setAttribute("id", id);
+    div.dataset.subject = card.subject || ""; // Matéria
+    div.dataset.topic = card.topic || ""; // Assunto
 
     remove.className = "remove";
     number.className = "number";
@@ -69,6 +82,9 @@ function addCard(card) {
       "text-align: center; display: none; color: green"
     );
     h2answer.innerHTML = card.answer;
+    
+    subject.innerHTML = `Matéria: ${card.subject || "Geral"}`;
+    subject.style.fontStyle = "italic";
 
     btn.innerHTML = "mostrar";
     remove.innerHTML = "x";
@@ -76,6 +92,8 @@ function addCard(card) {
 
     div.appendChild(h2question);
     div.appendChild(h2answer);
+    div.appendChild(subject);
+    div.appendChild(topic);
     div.appendChild(btn);
     div.appendChild(remove);
     div.appendChild(number);
@@ -105,6 +123,7 @@ function addCard(card) {
   }
 }
 
+//Exportar flashcards como JSON
 function exportJSON() {
   const dataStr = JSON.stringify(myLocal);
   const blob = new Blob([dataStr], { type: "application/json" });
@@ -118,6 +137,7 @@ function exportJSON() {
   document.body.removeChild(a);
 }
 
+// Importar flashcards de um arquivo JSON
 function importJSON() {
   const input = document.createElement("input");
   input.type = "file";
@@ -145,4 +165,27 @@ function importJSON() {
   
   input.click(); // Abre o seletor de arquivos
 }
-			
+
+// Filtrar flashcards
+filterInput.addEventListener("input", () => {
+	const filterText = filterInput.value.toLowerCase();
+	
+	document.querySelectorAll(".flashcard").forEach((card) => {
+		const question = card.querySelector("h2").innerText.toLowerCase();
+		const subject = card.dataset.subject?.toLowerCase() || "";
+		const topic = card.dataset.topic?.toLowerCase() || "";
+		
+		if (
+			question.includes(filterText) ||
+			subject.includes(filterText) ||
+			topic.includes(filterText) 
+		)	{
+			card.style.display = "block";
+		} else {
+			card.style.display = "none";
+		}
+	 });
+ });
+
+// Inicia os flashcards salvos
+myLocal.forEach(addCard);
