@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcards - Infórmatica</title>
+    <title>Flashcards - Informática</title>
     <link rel="stylesheet" href="gerador_flashcards_informatica.css" />
   </head>
   <body>
     <div class="nav">
-      <h1>Flashcards - Infórmatica</h1>
+      <h1>Flashcards - Informática</h1>
       <div>
-        <button onclick="create()">Novo card</button>
-        <button onclick="removeAll()">Excluir todos</button>
+		<input type="text" id="filter" placeholder="Filtrar por matéria ou assunto">
+        <button onclick="create()">Criar Flashcard</button>
         <button onclick="exportJSON()">Exportar</button>
         <button onclick="importJSON()">Importar</button>
+        <button onclick="removeAll()">Excluir todos</button>
       </div>
     </div>
 
@@ -22,6 +23,8 @@
         <h2>Criar card</h2>
         <input type="text" id="question" placeholder="Insira a questão" />
         <input type="text" id="answer" placeholder="Insira a resposta" />
+        <input type="text" id="subject" placeholder="Matéria (opcional)"/>
+        <input type="text" id="topic" placeholder="Assunto (opcional)"/>
 
         <span class="obs"
           >Certifique-se de preencher os campos de pergunta e resposta</span
@@ -31,6 +34,7 @@
           <button onclick="cancel()">Cancelar</button>
         </div>
       </div>
+		
     </div>
 
     <div class="flashcards"></div>

@@ -50,8 +50,6 @@ function save() {
   }
 }
 
-myLocal.forEach(addCard);
-
 // Adicionar flashcards ao DOM ao carregar ou criar
 function addCard(card) {
   cardForm.style.display = "none";
@@ -115,7 +113,7 @@ function addCard(card) {
       if (confirm(`Deseja mesmo excluir o card ${Number(flashcardId) + 1}?`)) {
         myLocal.splice(flashcardId, 1);
         localStorage.setItem("items", JSON.stringify(myLocal));
-        window.location.reload();
+        e.target.parentNode.remove(); // Remove o flashcard do DOM
       }
     });
 
@@ -131,7 +129,7 @@ function exportJSON() {
   
   const a = document.createElement("a");
   a.href = url;
-  a.download = "flashcards.json";
+  a.download = "flashcards_portugues.json"; // Nome fixo do arquivo criado após exportar
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -168,13 +166,36 @@ function importJSON() {
 
 // Filtrar flashcards
 filterInput.addEventListener("input", () => {
-	const filterText = filterInput.value.toLowerCase();
+	const filterText = filterInput.value
+		.trim() //Remove espaços no início e final
+		.normalize("NFD") //Remove acentos da string
+		.replace(/[\u0300-\u036f]/g, "") //Remove os caracteres de acento
+		.toLowerCase(); //Coverte para minúsculas
 	
 	document.querySelectorAll(".flashcard").forEach((card) => {
-		const question = card.querySelector("h2").innerText.toLowerCase();
-		const subject = card.dataset.subject?.toLowerCase() || "";
-		const topic = card.dataset.topic?.toLowerCase() || "";
+		const question = card.querySelector("h2").innerText
+			.trim() 
+			.normalize("NFD") 
+			.replace(/[\u0300-\u036f]/g, "") 
+			.toLowerCase(); 
 		
+		const subject = card.dataset.subject
+			? card.dataset.subject
+				.trim() 
+				.normalize("NFD") 
+				.replace(/[\u0300-\u036f]/g, "") 
+				.toLowerCase()
+			 : "";
+
+		const topic = card.dataset.topic
+			? card.dataset.topic
+				.trim() 
+				.normalize("NFD") 
+				.replace(/[\u0300-\u036f]/g, "") 
+				.toLowerCase()
+			: "";
+
+		//Verifica se a pergunta, assunto ou tópico incluem o texto do filtro
 		if (
 			question.includes(filterText) ||
 			subject.includes(filterText) ||
