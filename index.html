@@ -16,20 +16,27 @@
 
     <h1 class="titulo-materias">Seu Portal de Aprendizado</h1>
 
-    <div class="materias">
-        <div class="cartao"><a href="geografia.maranhao/geografia.maranhao.html">Geografia do Maranhão</a></div>
-        <div class="cartao"><a href="informatica/informatica.html">Informática</a></div>
-        <div class="cartao"><a href="matematica/matematica.html">Matemática</a></div>
-        <div class="cartao"><a href="portugues/portugues.html">Português</a></div>
-    </div>
+		<div class="materias">
+			<div class="cartao"><a href="geografia.maranhao/geografia.maranhao.html">Geografia do Maranhão</a></div>
+			<div class="cartao"><a href="informatica/informatica.html">Informática</a></div>
+			<div class="cartao"><a href="matematica/matematica.html">Matemática</a></div>
+			<div class="cartao"><a href="portugues/portugues.html">Português</a></div>
+		</div>
     
     <div class="feedback">
-		<h1>Feedback do Portal de Aprendizado</h1>
-		<p>Estamos sempre buscando melhorar! Por favor, compartilhe 
-		suas sugestões ou relate problemas que você encontrou</p>
-		<a href="https://docs.google.com/forms/d/e/1FAIpQLSct6at8JNhv4kBWpQYRsTM4WkWoNwhJCmWpj-xeNDYJe-Ftfg/viewform?usp=dialog">Deixe seu Feedback</a>
-		
+        <h1>Feedback do Portal</h1>
+        <p>Deixe sua sugestão ou reporte um erro:</p>
+        <form id="feedbackForm">
+            <textarea id="mensagem" placeholder="Digite sua mensagem..." rows="5" required></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mensagemEnviada" style="display:none; color: green; margin-top: 10px;">
+            Obrigado pelo seu feedback!
+        </div>
     </div>
+    
+     <script src="script.js"></script>
     
 </body>
 </html>
