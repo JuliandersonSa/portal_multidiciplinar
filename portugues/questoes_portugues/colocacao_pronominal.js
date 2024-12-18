@@ -56,9 +56,15 @@ function submitAnswer(selected) {
 
     if (selected === question.answer) {
         score++;
+<<<<<<< HEAD
         result.innerHTML = "<strong>Correto!</strong><br>";
     } else {
         result.innerHTML = "<strong>Incorreto!</strong><br>";
+=======
+        result.innerHTML = "<span style='color: green; font-weight: bold;'>Correto!</span><br>";
+    } else {
+        result.innerHTML = "<span style='color: red; font-weight: bold;'>Incorreto!</span><br>";
+>>>>>>> 839a72c (correção de todos arquivos feedback, googleforms, green e red)
     }
 
     result.innerHTML += `<p>${question.comment}</p>`;

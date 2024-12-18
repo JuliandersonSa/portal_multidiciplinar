@@ -1,0 +1,29 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reporte_erro.css">
+    <title>Reportar Erro</title>
+</head>
+
+<body>
+
+    <h1 class="titulo-materias">Reportar Erro</h1>
+    
+    <div class="feedback">
+        <h1>Reportar Erro</h1>
+        <p>Encontrou algum problema? Descreva abaixo o erro e clique em "Enviar"</p>
+        <form id="feedbackForm">
+            <textarea id="mensagem" placeholder="Digite sua mensagem..." rows="5" required></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mensagemEnviada" style="display:none; color: green; margin-top: 10px;">
+            Obrigado pelo seu feedback!
+        </div>
+    </div>
+    
+     <script src="reporte_erro.js"></script>
+    
+</body>
+</html>
