@@ -63,9 +63,9 @@ function submitAnswer(selected) {
 
     if (selected === question.answer) { // Verifica se a resposta está correta
         score++; // Incrementa a pontuação se a resposta estiver correta
-        result.innerHTML = `<span style="color: green; font-weight: bold;">Correto!</span><br>`; // Exibe mensagem de acerto
+        result.innerHTML = "<strong>Correto!</strong><br>"; // Exibe mensagem de acerto
     } else {
-        result.innerHTML = `<span style="color: red; font-weight: bold;">Incorreto!</span><br>`; // Exibe mensagem de erro se a resposta estiver errada
+        result.innerHTML = "<strong>Incorreto!</strong><br>"; // Exibe mensagem de erro se a resposta estiver errada
     }
 
     result.innerHTML += `<p>${question.comment}</p>`; // Exibe o comentário relacionado à questão (se houver)
