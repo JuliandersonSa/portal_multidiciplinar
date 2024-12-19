@@ -7,12 +7,10 @@
 </head>
 
 <body>
-
-    <h1 class="titulo-materias">Feedback</h1>
     
     <div class="feedback">
-        <h1>Feedback</h1>
-        <p>Deixe sua sugestão de melhoria, seu feedback é muito importante para nós!"</p>
+        <h1 style="color: green; font-weight: bold";>Feedback</h1>
+        <p><strong>Deixe sua sugestão, seu feedback é muito importante para continuarmos melhorando!</strong></p>
         <form id="feedbackForm">
             <textarea id="mensagem" placeholder="Digite sua mensagem..." rows="5" required></textarea>
             <br>
@@ -21,6 +19,12 @@
         <div id="mensagemEnviada" style="display:none; color: green; margin-top: 10px;">
             Obrigado pelo seu feedback!
         </div>
+        
+			<!-- Botão para voltar -->
+			<div class="button-container">
+				<a href="../index.html" class="button">Clique aqui para voltar</a>
+			</div>
+        
     </div>
     
      <script src="feedback.js"></script>
