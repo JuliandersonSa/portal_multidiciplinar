@@ -23,6 +23,12 @@ h1 {
 /* Estilo dos botões de resposta */
 button {
     margin-right: 5px; /* Adiciona um espaço de 5 pixels à direita dos botões para separá-los */
+	padding: 8px 8px;
+	font-weight: bold;
+	margin: 5px;
+	border: 1px solid;
+	border-radius: 5px; /* Arredonda os cantos do contêiner para um visual mais suave */
+
 }
 
 /* Estilo do contêiner que exibe os resultados das respostas */

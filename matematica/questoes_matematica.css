@@ -1,70 +1,81 @@
+/* Estilo geral do corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif; /* Define a fonte principal da página */
+    background-color: #f9f9f9; /* Define a cor de fundo para um tom claro */
+    margin: 0; /* Remove as margens padrão do navegador */
+    padding: 20px; /* Adiciona um espaçamento interno ao redor do conteúdo */
 }
 
+/* Estilo do título principal (h1) */
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #333; /* Define uma cor cinza escura para o texto */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
 }
 
+/* Estilo do container que envolve as perguntas */
 #question-container {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+	margin-top: 20px; /* Adiciona um espaço de 20 pixels acima do contêiner de questões */
+    background-color: #fff; /* Define um fundo branco para destacar as questões */
+    padding: 10px; /* Adiciona um espaçamento interno de 10 pixels ao redor do conteúdo */
+    border-radius: 5px; /* Arredonda os cantos do contêiner para um visual mais suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil para dar profundidade ao contêiner */
 }
 
+/* Estilo para o texto das perguntas */
 .question {
-    margin-bottom: 15px;
-    font-size: 16px; /* Ajuste o tamanho da fonte, se necessário */
+    margin-bottom: 15px; /* Espaçamento abaixo de cada pergunta */
+    font-size: 16px; /* Ajusta o tamanho da fonte para leitura */
 }
 
+/* Estilo das opções de resposta */
 .options {
-    display: flex;
-    justify-content: space-around; /* Espaça as opções igualmente */
+    display: flex; /* Alinha os itens em uma única linha */
+    justify-content: space-around; /* Distribui as opções de forma igualitária */
 }
 
+/* Estilo geral dos botões */
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#result {
-    text-align: justify;
+    background-color: #33333; /* Cor de fundo cinza */
+    border: none; /* Remove as bordas padrão */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    padding: 8px 8px; /* Adiciona espaçamento interno no botão */
+    cursor: pointer; /* Define o cursor como uma mão ao passar sobre o botão */
+    border: 1px solid;
+    margin: 5px; /* Espaçamento ao redor do botão */
     font-weight: bold;
-    margin-top: 20px;
 }
 
+/* Estilo para o efeito de hover nos botões */
+button:hover {
+    background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilo do texto de resultados */
+#result {
+    text-align: justify; /* Justifica o texto para uma apresentação organizada */
+    font-weight: bold; /* Destaca o texto em negrito */
+    margin-top: 20px; /* Adiciona espaço acima da seção de resultados */
+}
+
+/* Estilo específico para o botão "Próximo" */
 #next-button {
-    display: none;
+    display: none; /* Inicialmente escondido */
 }
 
+/* Estilo específico para o botão "Voltar" */
 #voltar-button {
-    display: block;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 25px;
-    text-align: center;
-    margin: 40px auto 0; /* Centraliza o botão e adiciona margem superior */
+    display: block; /* Torna o botão visível */
+    background-color: #007BFF; /* Define a cor de fundo azul */
+    color: white; /* Cor do texto branca */
+    border: none; /* Remove as bordas padrão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    padding: 12px 25px; /* Adiciona espaçamento interno maior que os outros botões */
+    text-align: center; /* Centraliza o texto no botão */
+    margin: 40px auto 0; /* Centraliza o botão horizontalmente e adiciona espaço acima */
 }
 
+/* Estilo para o efeito de hover no botão "Voltar" */
 #voltar-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
 }
-
