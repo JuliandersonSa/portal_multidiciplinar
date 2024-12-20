@@ -29,7 +29,6 @@
 
 /* Estilo do botão de voltar */
 .button-container {
-    margin-top: 40px; /* Espaçamento para colocar o botão mais para baixo */
     text-align: center;
 }
 
@@ -37,7 +36,7 @@
     display: inline-block;
     background-color: #007BFF;
     color: white;
-    padding: 12px 25px;
+    padding: 8px 10px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;

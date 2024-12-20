@@ -131,7 +131,7 @@ button:hover {
     display: inline-block;
     background-color: #007BFF;
     color: white;
-    padding: 12px 25px;
+    padding: 8px 10px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -140,4 +140,25 @@ button:hover {
 
 .button:hover {
     background-color: #0056b3;
+}
+
+.feeds {
+	color: green;
+}
+
+.feeds {
+    color: white;
+    font-weight: bold;
+    margin-left: 40px;
+    background-color: #28a745;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.feeds:hover {
+    background-color: #218838;
+    transform: scale(1.05);
 }

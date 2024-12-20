@@ -70,7 +70,7 @@ button:hover {
     color: white; /* Cor do texto branca */
     border: none; /* Remove as bordas padrão */
     border-radius: 5px; /* Arredonda os cantos do botão */
-    padding: 12px 25px; /* Adiciona espaçamento interno maior que os outros botões */
+    padding: 8px 10px; /* Adiciona espaçamento interno maior que os outros botões */
     text-align: center; /* Centraliza o texto no botão */
     margin: 40px auto 0; /* Centraliza o botão horizontalmente e adiciona espaço acima */
 }
