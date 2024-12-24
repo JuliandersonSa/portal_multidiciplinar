@@ -52,6 +52,17 @@
                 comment: "Resposta: letra C",
                 image: "imagens_sequencia_numerica/004.jpg"
 			},
+			{
+                question: {
+					text: "(0005) O Quadro 1 registra o quantitativo aproximado de casos confirmados de Covid-19 em cada mês, em uma região onde ainda não havia ocorrido a aplicação das vacinas preventivas. <br><br>Quadro 1: Casos confirmados de Covid-19, por mês.",
+					extraImage: "imagens_sequencia_numerica/005a.jpg",
+					description: "Considerando que nenhuma medida tenha sido tomada para o controle da doença nesse ano, e que o padrão de crescimento de casos tenha sido mantido. É possível dizer que o quantitativo total de casos confirmados nesse ano foi de:",
+                },
+                options: { A: "1 203 000.", B: "2 047 000.", C: "1 000 000.", D: "2 008 000." },
+                answer: "B",
+                comment: "Resposta: letra B",
+                image: "imagens_sequencia_numerica/005.jpg"
+			},
             
 		 ];
 
@@ -71,8 +82,30 @@
 					const question = questions[randomIndex];
 
 					const questionContainer = document.getElementById('question-container');
+					
+					// Verifica se a questão é um objeto (com text, description e extraImage) ou uma string
+					let questionText = '';
+					let extraImageHTML = '';
+					let descriptionHTML = '';
+					
+					if (typeof question.question === 'object') {
+					// Se question for um objeto, pega o text, description e extraImage
+						questionText = `<p>${question.question.text}</p>`;
+						descriptionHTML = question.question.description ? `<p>${question.question.description}</p>` : '';
+						extraImageHTML = question.question.extraImage ? `<img src="${question.question.extraImage}" alt="Imagem extra" style="max-width: 300px;"/>` : '';
+					} else {
+					// Se question for uma string, apenas exibe
+						questionText = `<p>${question.question}</p>`;
+					}
+	
+           
+					// Exibe a questão com as alternativas
 					questionContainer.innerHTML = `
-						<strong>Questão ${currentQuestionIndex + 1}:</strong> ${question.question}
+						<strong>Questão ${currentQuestionIndex + 1}:</strong>
+						${questionText}
+						${extraImageHTML}
+						${descriptionHTML}
+            
 						<ul>
 							<li>A) ${question.options.A}</li>
 							<li>B) ${question.options.B}</li>
@@ -103,6 +136,14 @@
 
 				result.innerHTML += `<img src="${question.image}" alt="Explicação:" style="max-width: 300px;"/>`;
 				result.innerHTML += `<p>${question.comment}</p>`;
+				
+				if (question.extraImage) {
+				result.innerHTML += `<img src="${question.extraImage}" alt="Imagem adicional" style="max-width: 300px;"/>`;
+				}
+				
+				if (question.extraDescription) {
+				result.innerHTML += `<p>${question.extraDescription}</p>`;
+				}
 
 				result.classList.add('fade-in'); // Animação de resultado
 				document.getElementById('next-button').style.display = 'block'; // Exibe o botão "Próxima Questão"
