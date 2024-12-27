@@ -1,7 +1,9 @@
+/* Reset de margens e paddings */
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 /* Estilo global */
 body {
     font-family: 'Arial', sans-serif;
@@ -9,14 +11,19 @@ body {
     padding: 0;
     background-color: #87ceeb;
     color: #333;
-    margin-left: 220px;
 }
 
+/* Cabeçalho */
 header {
-	background: #007bff;
-	color: white;
-	padding: 20px;
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo_portal {
 	text-align: center;
+	margin-top: 20px;
 }
 
 /* Título das matérias */
@@ -26,7 +33,7 @@ header {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Efeito de animação */
+/* Animação para o título */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -47,51 +54,31 @@ header {
     padding: 10px;
 }
 
-.cartao {
-    background: #fff;
-    border: 1px solid #007BFF;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    .sidebar {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
 
-.cartao a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-}
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
 
-.cartao:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    .materias {
-        flex-direction: column;
-        align-items: center;
+    .cartao {
+        width: 90%;
+        margin: 10px 0;
     }
 }
 
+/* Estilo do formulário de feedback */
 .feedback {
-	width: 80%;
+    width: 80%;
     max-width: 500px;
     margin: auto;
     background: white;
-    padding: 10px 40px; 
+    padding: 10px 40px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin-top: 100px;
@@ -148,10 +135,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-.feeds {
-	color: green;
-}
-
+/* Estilo do link de feed */
 .feeds {
     color: white;
     font-weight: bold;
@@ -164,67 +148,67 @@ button:hover {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.feeds:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
-
+/* Estrutura do layout */
 .container {
-	display: flex;
-	
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sidebar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 250px;
-	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 20px auto;
 }
 
 .content {
-	flex-grow: 1;
-	padding: 20px;
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 270px; /* Deixe espaço para a sidebar */
 }
 
+/* Estilo de listas e links */
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .accordion-menu {
-	width: 100%;
+    width: 100%;
 }
 
 .dropdownlink {
-	padding: 15px;
-	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #f1f1f1;
-	border-bottom: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
 }
 
 .submenuItems {
-	display: none;
+    display: none;
 }
 
 .submenuItems li {
-	padding: 10px 15px;
-	background-color: #e0e0e0;
+    padding: 10px 15px;
+    background-color: #e0e0e0;
 }
 
-.submenuItens li:hover {
-	background-color: #d4d4d4;
+.submenuItems li:hover {
+    background-color: #d4d4d4;
 }
 
-/* Garantir que links diretos no menu tenham o mesmo estilo */
+/* Links no menu */
 .accordion-menu a.dropdownlink {
     display: flex;
     align-items: center;
@@ -234,10 +218,9 @@ a {
     background-color: #f1f1f1;
     border-bottom: 1px solid #ddd;
     justify-content: center;
-	color: #333;
+    color: #333;
 }
 
 .accordion-menu a.dropdownlink:hover {
     background-color: #e0e0e0;
 }
-
