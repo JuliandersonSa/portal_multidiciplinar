@@ -6,8 +6,12 @@ body {
     padding: 20px;
 }
 
-h1 {
-    color: #333;
+/* Cabeçalho */
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 .disciplinas-container {
