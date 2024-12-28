@@ -58,7 +58,8 @@ footer {
 
 /* Estilo do botão de voltar */
 .button-container {
-    margin-top: 40px; 
+    margin-top: 10px; 
+    text-align: center;
 }
 
 .button {
