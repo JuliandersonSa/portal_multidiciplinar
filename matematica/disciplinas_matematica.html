@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disciplinas: Matemática</title>
+    <title>Disciplinas de Matemática</title>
     <link rel="stylesheet" href="disciplinas_matematica.css">
 </head>
 <body>
     <header>
-        <h1 class="pagina-principal">Questões de Matemática</h1>
+        <h1>Questões de Matemática</h1>
     </header>
-    <div class="disciplinas-container">
-        <a href="conjuntos.html" class="disciplina">Conjuntos</a>
-        <a href="funcao_proporcao.html" class="disciplina">Funções e Proporções</a>
-        <a href="sequencia_numerica.html" class="disciplina">Sequências Numéricas</a>
-        <!-- Adicione mais disciplinas aqui -->
-        
-        <!-- Continue com os links das demais disciplinas -->
-    </div>
     
-    <!-- Botão para voltar -->
-    <div class="button-container">
-        <a href="matematica.html" class="button">Voltar</a>
+    <input type="text" id="searchBar" placeholder="Buscar disciplina..." onkeyup="searchDisciplinas()">
+
+    <div id="disciplinasContainer" class="disciplinas-container">
+        <!-- As disciplinas são geradas dinamicamente via JavaScript -->
     </div>
 
+    <div class="pagination">
+        <button onclick="changePage(-1)">Anterior</button>
+        <button onclick="changePage(1)">Próximo</button>
+    </div>
+
+    <script src="disciplinas_matematica.js"></script>
 </body>
 </html>
-
