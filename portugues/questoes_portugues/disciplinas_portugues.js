@@ -1,5 +1,5 @@
 const disciplinas = [
-    'colocacao_pronominal', 'concordancia_verbal'
+    'colocacao_pronominal', 'concordancia_verbal', 'formacao_das_palavras'
 ];
 
 let currentPage = 0;
