@@ -27,12 +27,12 @@ input#searchBar {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .disciplina {
     display: block;
-    padding: 15px;
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     text-align: center;

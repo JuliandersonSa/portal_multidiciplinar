@@ -1,5 +1,5 @@
 const disciplinas = [
-    'hardware_software', 'internet_intranet_extranet'
+    'hardware_software', 'internet', 'windows'
 ];
 
 let currentPage = 0;
