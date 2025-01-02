@@ -20,6 +20,13 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil para dar profundidade ao contêiner */
 }
 
+#question-container img {
+	width: 300px;
+	margin: 10px 0;
+	display: block;
+	max-width: 100%;
+}
+
 /* Estilo dos botões de resposta */
 button {
     margin-right: 5px; /* Adiciona um espaço de 5 pixels à direita dos botões para separá-los */
