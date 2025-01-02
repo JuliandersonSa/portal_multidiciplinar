@@ -23,7 +23,8 @@ function loadQuestions() {
                 },
                 answer: row.c[5].v,
                 comment: row.c[6] ? row.c[6].v : '',
-                image: row.c[7] ? row.c[7].v : '' //adiciona campo imagem
+                image: row.c[7] ? row.c[7].v : '', // imagem da questão
+                comentImage: row.c[8] ? row.c[8].v : '' // imagem do comentário
             }));
 
             loadQuestion();
@@ -36,30 +37,29 @@ function loadQuestion() {
         const question = questions[currentQuestionIndex];
         const questionContainer = document.getElementById('question-container');
         
-        //exibe a questão
         questionContainer.innerHTML = `
             <strong>Questão ${currentQuestionIndex + 1}:</strong> 
             ${question.question}
         `;
         
-        //exibe a imagem se existir
-		if (question.image && question.image.trim() !== '') {
-				const imageElement = document.createElement('img');
-				imageElement.src = question.image;
-				imageElement.alt = 'imagem relacionada à questão';
-				questionContainer.appendChild(imageElement);//adiciona a imagem ao container
-			}
-			
-		const optionsHtml = `
-			<ul>
+        if (question.image && question.image.trim() !== '') {
+            const imageElement = document.createElement('img');
+            imageElement.src = question.image;
+            imageElement.alt = 'Imagem relacionada à questão';
+            imageElement.style.marginTop = '10px';
+            questionContainer.appendChild(imageElement);
+        }
+        
+        const optionsHtml = `
+            <ul>
                 <li>A) ${question.options.A}</li>
                 <li>B) ${question.options.B}</li>
                 <li>C) ${question.options.C}</li>
                 <li>D) ${question.options.D}</li>
             </ul>
-		`;
-		questionContainer.innerHTML +=optionsHtml; 
-        
+        `;
+        questionContainer.innerHTML += optionsHtml;
+
         document.getElementById('result').innerHTML = "";
         document.getElementById('next-button').style.display = 'none';
     } else {
@@ -73,12 +73,26 @@ function submitAnswer(selected) {
 
     if (selected === question.answer) {
         score++;
-        result.innerHTML = `<span style="color: green; font-weight: bold;">Correto!</span><br>`; //Exibe mensagem de acerto`;
+        result.innerHTML = `<span style="color: green; font-weight: bold;">Correto!</span><br>`;
     } else {
         result.innerHTML = `<span style="color: red; font-weight: bold;">Incorreto!</span><br>`;
     }
 
-    result.innerHtml += `<p>${question.comment}</p>`;
+    // Exibe o comentário
+    result.innerHTML += `<p>${question.comment}</p>`;
+
+    // Depuração: Verifica se o link da imagem do comentário é válido
+    console.log("ComentImage URL:", question.comentImage);
+
+    // Exibe a imagem do comentário, se existir
+    if (question.comentImage && question.comentImage.trim() !== '') {
+        const comentImageElement = document.createElement('img');
+        comentImageElement.src = question.comentImage;
+        comentImageElement.alt = 'Imagem relacionada ao comentário';
+        comentImageElement.style.marginTop = '10px'; // Adiciona um espaçamento
+        result.appendChild(comentImageElement);
+    }
+
     document.getElementById('next-button').style.display = 'block';
 }
 
