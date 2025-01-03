@@ -43,12 +43,6 @@ button {
     margin-top: 20px; /* Adiciona um espaço de 20 pixels acima do contêiner de resultados */
 }
 
-/* Estilo do botão de voltar */
-.button-container {
-    margin-top: 40px; /* Espaçamento para colocar o botão mais para baixo */
-    text-align: center;
-}
-
 .button {
     display: inline-block;
     background-color: #007BFF;
