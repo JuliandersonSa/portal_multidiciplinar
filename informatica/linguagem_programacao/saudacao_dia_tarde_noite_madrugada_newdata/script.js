@@ -13,7 +13,7 @@ function carregar(){
     // Passo 3: Usar condições para verificar o período do dia
     if(hora >= 6 && hora < 12){
         // Se a hora estiver entre 6 e 11 (manhã):
-        titulo.innerHTML =  `Agora são ${hora} horas<br><b>Bom Dia!</b>`
+        titulo.innerHTML =  `Agora são ${hora} hora(s)<br><b>Bom Dia!</b>`
         // Exibe a mensagem "Bom Dia!" junto com o horário.
 
         imagem.src = 'manha.png'
@@ -22,16 +22,16 @@ function carregar(){
         document.body.style.background = 'rgb(62, 203, 246)'
         // Muda a cor do fundo da página para azul claro.
     } else if(hora >= 12 && hora < 18){
-        titulo.innerHTML =  `Agora são ${hora} horas<br><b>Boa Tarde!</b>`
+        titulo.innerHTML =  `Agora são ${hora} hora(s)<br><b>Boa Tarde!</b>`
         imagem.src = 'tarde.png'
         document.body.style.background = 'rgb(123, 75, 7)'
     } else if(hora >= 18){
-        titulo.innerHTML = `Agora são ${hora} horas<br><b>Boa Noite!</b>`
+        titulo.innerHTML = `Agora são ${hora} hora(s)<br><b>Boa Noite!</b>`
         imagem.src = 'noite.png'
         document.body.style.background = 'rgb(47, 42, 42)'
     } else{
         // Se nenhuma das condições acima for verdadeira, é madrugada:
-        titulo.innerHTML =  `Agora são ${hora} horas<br><b>Boa Madrugada!</b>`
+        titulo.innerHTML =  `Agora são ${hora} hora(s)<br><b>Boa Madrugada!</b>`
         imagem.src = 'madrugada.png'
         document.body.style.background = 'rgb(47, 42, 42)'
     }
