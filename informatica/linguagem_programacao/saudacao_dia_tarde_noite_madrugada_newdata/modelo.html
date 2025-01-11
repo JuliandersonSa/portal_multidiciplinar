@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de site interativo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<!--O evento onload chama a função "carregar()" quando a página termina de carregar-->
+<body onload="carregar()">
+    <header>
+        <h1>Modelo de site interativo</h1>
+    </header>
+
+    <section>
+        <!-- Div que contém o título dinâmico -->
+        <div id="titulo">
+            Aqui vai a hora...  <!-- Texto inicial que será atualizado dinamicamente -->
+        </div>
+        
+        <!-- Div que contém a imagem -->
+        <div id="foto">
+            <img id="imagem" src="noite.png" alt="foto de manhã"> <!-- Imagem inicial com o atributo alt (texto alternativo caso a imagem não carregue) -->
+        </div>
+    </section>
+   
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; Julianderson Sá</</p>
+    </footer>
+
+     <!-- Vincula o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+
+    <div id="botao-caixa">
+        <a href="../javascript.html" id="botao">Voltar</a>
+    </div>
+</body>
+</html>

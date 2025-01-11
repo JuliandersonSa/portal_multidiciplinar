@@ -1,0 +1,56 @@
+/* Estilo geral do corpo da página */
+body{
+    background: rgb(47, 42, 42); /* Define um fundo escuro com cor RGB */
+    font: normal 15pt arial; /* Define o estilo da fonte como Arial, tamanho 15pt */
+}
+
+/* Estilo do cabeçalho */
+header{
+    color: aliceblue; /* Define a cor do texto como Alice Blue */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo do título principal (H1) */
+h1{
+    text-shadow: 2px 2px black; /* Adiciona uma sombra preta ao texto para destacar */
+}
+
+section{
+    background: white; /* Define o fundo branco para a seção */
+    padding: 20px 50px; /* Adiciona espaçamento interno (padding) em cima/baixo e nas laterais */
+    width: 200px; /* Define a largura fixa da seção */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    margin: auto; /* Centraliza a seção na página */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.58); /* Adiciona uma sombra suave ao redor da seção */
+}
+
+/* Estilo do rodapé */
+footer{
+    color: aliceblue; /* Define a cor do texto do rodapé como Alice Blue */
+    font-style: italic; /* Torna o texto em itálico */
+    text-align: center; /* Centraliza o texto no rodapé */
+}
+
+/* Estilo da imagem */
+#imagem{
+    width: 200px; /* Define a largura da imagem */
+    height: 200px; /* Define a altura da imagem */
+}
+
+#botao-caixa {
+    margin-top: 50px; 
+    text-align: center;
+}
+
+#botao{
+    display: inline-block;
+    background-color: #fbfdff;
+    color: blue;
+    padding: 8px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 20px
+}
