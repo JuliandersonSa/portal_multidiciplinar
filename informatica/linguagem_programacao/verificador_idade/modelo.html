@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="nome_radio_genero" id="id_radio_masculino" checked>
+                <label for="id_radio_masculino">Masculino</label>
+                <input type="radio" name="nome_radio_genero" id="id_radio_feminino">
+                <label for="id_radio_feminino">Feminino</label>
+                <input type="radio" name="nome_radio_genero" id="id_radio_outro">
+                <label for="id_radio_outro">Outro</label>
+            </p>
+            <input id="caixatxt" type="button" value="Verificador" onclick="verificador()">
+        </div>
+        
+        <div id="resposta">
+            <b>Gênero e idade aparecerá aqui!</b></div>
+        </div>
+        <div>
+            <img id="foto" src="" alt="">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; Julianderson Sá</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="botao-caixa">
+        <a href="../javascript.html" id="botao">Voltar</a>
+    </div>
+</body>
+</html>

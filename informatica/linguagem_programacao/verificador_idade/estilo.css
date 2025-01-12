@@ -1,0 +1,60 @@
+body{
+    background: rgb(30, 108, 58);
+    font: normal 15pt arial;
+}
+
+header{
+    color: aliceblue;
+    text-align: center;
+}
+
+section{
+    background: white; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.58);
+    text-align: center;
+}
+
+footer{
+    color: aliceblue;
+    font-style: italic;
+    text-align: center;
+}
+
+#foto{
+    text-align: center;
+    margin-top: -30pt;
+}
+
+#resposta{
+    background: rgb(154, 216, 61);
+    margin-top: 20px;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#caixatxt{
+    background-color: blue;
+    color: aliceblue;
+    font: normal 20px arial;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#botao-caixa {
+    margin-top: 50px; 
+    text-align: center;
+}
+
+#botao{
+    display: inline-block;
+    background-color: #fbfdff;
+    color: blue;
+    padding: 8px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 20px
+}
