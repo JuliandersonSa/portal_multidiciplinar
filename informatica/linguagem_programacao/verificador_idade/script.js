@@ -11,37 +11,92 @@ function verificador(){
         var foto = document.getElementById('foto')
         if(formulario_genero[0].checked){
             var sexo = 'MASCULINO'
-            if(idade >= 0 && idade < 10){
-                resposta.innerHTML = `Detectamos uma <b>CRIANÇA</b> do sexo <b>${sexo}</b> de <b>${idade}</b> anos de idade`
+            if(idade >= 0 && idade < 11){
+                resposta.innerHTML = `Detectamos uma <b>CRIANÇA</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-crianca-m.png'
                 foto.alt = 'Foto: Criança de 0 até 10 anos'
             }else if(idade >= 10 && idade < 16 ){
-                resposta.innerHTML = `Detectamos um <b>ADOLESCENTE</b> do sexo <b>${sexo}</b> de <b>${idade}</b> anos de idade`
+                resposta.innerHTML = `Detectamos um <b>ADOLESCENTE</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-adolescente-m.png'
                 foto.alt = 'Foto: Adolescente de 10 até 15 anos'
             }else if(idade >= 16 && idade < 26){
-                resposta.innerHTML = `Detectamos um <b>JOVEM</b> do sexo <b>${sexo}</b> de <b>${idade}</b> anos de idade`
+                resposta.innerHTML = `Detectamos um <b>JOVEM</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-jovem-m.png'
                 foto.alt = 'Foto: Jovem de 16 até 25 anos'
             }else if(idade >= 26 && idade < 45){
-                resposta.innerHTML = `Detectamos um <b>ADULTO</b> do sexo <b>${sexo}</b> de <b>${idade}</b> anos de idade`
+                resposta.innerHTML = `Detectamos um <b>ADULTO</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-adulto-m.png'
                 foto.alt = 'Foto: Adulto de 26 até 44 anos'
             }else if(idade >=45 && idade < 60){
-                resposta.innerHTML = `Detectamos uma pessoa na <b>MEIA IDADE</b> do sexo <b>${sexo}</b> de <b>${idade}</b> anos de idade`
+                resposta.innerHTML = `Detectamos uma pessoa na <b>MEIA IDADE</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-meia-idade-m.png'
                 foto.alt = 'Foto: Pessoa na meia idade de 45 até 59 anos'
             }else if(idade >= 60){
-                resposta.innerHTML = `Detectamos uma pessoa <b>IDOSA</b> do sexo <b>${sexo}</b> de <b>${idade}</b> anos de idade`
+                resposta.innerHTML = `Detectamos uma pessoa <b>IDOSA</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-idoso-m.png'
                 foto.alt = 'Foto: Pessoa idosa acima de 59 anos'
             }
         } else if(formulario_genero[1].checked){
             var sexo = 'FEMININO'
-            window.alert(`${sexo}`)
+            if(idade >= 0  && idade < 11){
+                resposta.innerHTML = `Detectamos uma <b>CRIANÇA </b> do sexo <b>${sexo} com <b>${idade} anos de idade`
+                foto.src = 'foto-crianca-f.png'
+                foto.alt = 'Foto: Criança de 0 até 10 anos'
+            }else if(idade >= 11 && idade < 16){
+                resposta.innerHTML = `Detectamos uma <b>ADOLESCENTE</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.src = 'foto-adolescente-f.png'
+                foto.alt = 'Foto: Adolescente de 11 até 15 anos'
+            }else if(idade >= 16 && idade < 26){
+                resposta.innerHTML = `Detectamos uma <b>JOVEM</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.src = 'foto-jovem-f.png'
+                foto.alt = 'Foto: Jovem de 16 até 25 anos'
+            }else if(idade >= 26 && idade < 45){
+                resposta.innerHTML = `Detectamos um <b>ADULTO</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.src = 'foto-adulto-f.png'
+                foto.alt = 'Foto: Adulto de 26 até 44 anos'
+            }else if(idade >= 45 && idade < 60 ){
+                resposta.innerHTML = `Detectamos uma pessoas na <b>MEIA IDADE</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.src = 'foto-meia-idade-f.png'
+                foto.alt = 'Foto: Pessoa na meia idade de 45 até 59 anos'
+            }else if(idade >= 60){
+                resposta.innerHTML = `Detectamos uma pessoa do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.src = 'foto-idoso-f.png'
+                foto.alt = 'Foto: Pessoa idosa acima de 59 anos'
+            }
         } else{
             var sexo = 'OUTRO'
-            window.alert(`${sexo}`)
-        }
+            if(idade >= 0 && idade < 11){
+                resposta.innerHTML = `Detectamos uma <b>CRIANÇA</b> com <b>${idade}</b> anos de idade`
+                foto.style.borderRadius = '50%'
+                foto.src = 'foto-pessoas0.png'
+                foto.alt = 'Foto: 4 pessoas pulando felizes ao pôr do sol'
+            }else if(idade >= 11 && idade < 16){
+                resposta.innerHTML = `Detectamos <b>ADOLESCENTE</b> com <b>${idade}</b> anos de idade`
+                foto.style.borderRadius = '50%'
+                foto.src = 'foto-pessoas1.png'
+                foto.alt = 'Foto: 7 pessoas de braços levantados admirando o pôr do sol'
+            }else if(idade >= 16 && idade < 26){
+                resposta.innerHTML = `Detectamos uma pessoa <b>JOVEM</b> com <b>${idade}</b> anos de idade`
+                foto.style.borderRadius = '50%'
+                foto.src = 'foto-pessoas2.png'
+                foto.alt = 'Foto: Várias pessoas em diferentes poses ao pôr do sol'
+            }else if(idade >= 26 && idade < 45){
+                resposta.innerHTML = `Detectamos uma pessoa <b>ADULTA</b> com <b>${idade}</b> anos de idade`
+                foto.style.borderRadius = '50%'
+                foto.src = 'foto-pessoas3.png'
+                foto.alt = 'Foto: Várias pessoas em um parque de dia'
+            }else if(idade >= 45 && idade < 60){
+                resposta.innerHTML = `Detectamos uma pessoa de <b>MEIA IDADE</b> com <b>${idade}</b> anos de idade`
+                foto.style.borderRadius = '50%'
+                foto.src = 'foto-pessoas4.png'
+                foto.alt = 'Foto: 6 pessoas felizes ao pôr do sol'
+            }else if(idade >= 60){
+                resposta.innerHTML = `Detectamos uma pessoa <b>IDOSA</b> com <b>${idade}</b> anos de idade`
+                foto.style.borderRadius = '50%'
+                foto.src = 'foto-pessoas5.png'
+                foto.alt = 'Foto: Várias pessoas felizes a noite com sinalizadores com fumaça colorida'
+            }
+            }
+                
     }
 }
