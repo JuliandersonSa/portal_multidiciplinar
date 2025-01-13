@@ -1,16 +1,26 @@
 function verificador(){
+    // Obtém a data atual do sistema
     var data = new Date()
+    // Obtém o ano atual (exemplo: 2025)
     var ano = data.getFullYear()
+    // Captura o valor do campo de entrada de ano (ano de nascimento)
     var ano_formulario = document.getElementById('txtano')
+    // Captura o elemento onde será exibida a resposta
     var resposta = document.getElementById('resposta')
+    // Verifica se o campo de ano está vazio ou se o ano inserido é maior que o ano atual
     if((ano_formulario.value.length) === 0 || Number(ano_formulario.value) > ano){
         window.alert(`O ano de ${ano_formulario.value} é inválido! Tente novamente.`)
     } else{
+        // Captura os botões de rádio do formulário (gênero)
         var formulario_genero = document.getElementsByName('nome_radio_genero')
+        // Calcula a idade com base no ano atual e no ano de nascimento
         var idade = ano - Number(ano_formulario.value)
+        // Captura o elemento da imagem que será carregada dinamicamente
         var foto = document.getElementById('foto')
+        // Verifica se o gênero selecionado é "Masculino"
         if(formulario_genero[0].checked){
             var sexo = 'MASCULINO'
+            // Exibe mensagens e imagens específicas com base na faixa etária
             if(idade >= 0 && idade < 11){
                 resposta.innerHTML = `Detectamos uma <b>CRIANÇA</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-crianca-m.png'
@@ -36,6 +46,7 @@ function verificador(){
                 foto.src = 'foto-idoso-m.png'
                 foto.alt = 'Foto: Pessoa idosa acima de 59 anos'
             }
+        // Verifica se o gênero selecionado é "Feminino"
         } else if(formulario_genero[1].checked){
             var sexo = 'FEMININO'
             if(idade >= 0  && idade < 11){
@@ -63,6 +74,7 @@ function verificador(){
                 foto.src = 'foto-idoso-f.png'
                 foto.alt = 'Foto: Pessoa idosa acima de 59 anos'
             }
+        // Caso o gênero selecionado seja "Outro"
         } else{
             var sexo = 'OUTRO'
             if(idade >= 0 && idade < 11){

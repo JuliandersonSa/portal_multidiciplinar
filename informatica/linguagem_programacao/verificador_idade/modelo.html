@@ -11,26 +11,36 @@
         <h1>Verificador de idade</h1>
     </header>
 
+    <!-- seção principal que contém o formulário -->
     <section>
         <div>
             <p>Ano de Nascimento:
                 <input type="number" name="txtano" id="txtano" min="0">
             </p>
             <p>Sexo:
-                <input type="radio" name="nome_radio_genero" id="id_radio_masculino" checked>
+                <!-- Botão de seleção para "Masculino" -->           <input type="radio" name="nome_radio_genero" id="id_radio_masculino" checked>
+                <!-- Texto associado ao botão "Masculino" -->
                 <label for="id_radio_masculino">Masculino</label>
+                <!-- Botão de seleção para "Feminino" -->
                 <input type="radio" name="nome_radio_genero" id="id_radio_feminino">
+                <!-- Texto associado ao botão "Feminino" -->
                 <label for="id_radio_feminino">Feminino</label>
+                <!-- Botão de seleção para "Outro" -->
                 <input type="radio" name="nome_radio_genero" id="id_radio_outro">
+                <!-- Texto associado ao botão "Outro" -->
                 <label for="id_radio_outro">Outro</label>
             </p>
+            <!-- Botão que ativa a função "verificador" ao ser clicado -->
             <input id="caixatxt" type="button" value="Verificador" onclick="verificador()">
         </div>
         
+        <!-- Div que será usada para mostrar o resultado (gênero e idade) -->
         <div id="resposta">
             <b>Gênero e idade aparecerá aqui!</b></div>
         </div>
+
         <div>
+        <!-- A imagem será carregada dinamicamente pelo JavaScript -->
             <img id="foto" src="" alt="">
         </div>
     </section>
