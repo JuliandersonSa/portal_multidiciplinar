@@ -1,22 +1,22 @@
 /* Estilo geral do corpo da página */
 body{
-    background: rgb(47, 42, 42); /* Define um fundo escuro com cor RGB */
-    font: normal 15pt arial; /* Define o estilo da fonte como Arial, tamanho 15pt */
+    background: rgb(47, 42, 42); 
+    font: normal 15pt arial; 
 }
 
 /* Estilo do cabeçalho */
 header{
-    color: aliceblue; /* Define a cor do texto como Alice Blue */
-    text-align: center; /* Centraliza o texto do cabeçalho */
+    color: aliceblue; 
+    text-align: center; 
 }
 
-/* Estilo do título principal (H1) */
+/* Estilo do título principal (h1) */
 h1{
     text-shadow: 2px 2px black; /* Adiciona uma sombra preta ao texto para destacar */
 }
 
 section{
-    background: white; /* Define o fundo branco para a seção */
+    background: white; 
     padding: 20px 50px; /* Adiciona espaçamento interno (padding) em cima/baixo e nas laterais */
     width: 200px; /* Define a largura fixa da seção */
     border-radius: 10px; /* Adiciona cantos arredondados */
@@ -27,9 +27,9 @@ section{
 
 /* Estilo do rodapé */
 footer{
-    color: aliceblue; /* Define a cor do texto do rodapé como Alice Blue */
-    font-style: italic; /* Torna o texto em itálico */
-    text-align: center; /* Centraliza o texto no rodapé */
+    color: aliceblue; 
+    font-style: italic; 
+    text-align: center; 
 }
 
 /* Estilo da imagem */
@@ -38,19 +38,18 @@ footer{
     height: 200px; /* Define a altura da imagem */
 }
 
+/* Estilo do botão voltar*/
 #botao-caixa {
-    margin-top: 50px; 
+    margin-top: 50px; /*Adiciona um espaço acima do elemento*/
     text-align: center;
 }
 
 #botao{
-    display: inline-block;
+    display: inline-block;/* O elemento é exibido como um bloco em linha o que permite aplicar largura, altura, margens e paddings, mantendo o alinhamento com outros elementos*/
     background-color: #fbfdff;
     color: blue;
     padding: 8px 5px;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    margin-left: 20px
+    text-decoration: none; /* Remove o sublinhado do botão "Voltar"*/
+    font-weight: bold; /*O texto "Voltar" do botão é exibido em negrito*/
 }
