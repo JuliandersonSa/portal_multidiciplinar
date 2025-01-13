@@ -82,7 +82,7 @@ function verificador(){
                 foto.alt = 'Foto: Adulto de 26 até 44 anos'
             }else if(idade >= 45 && idade < 60 ){
                 // Meia idade
-                resposta.innerHTML = `Detectamos uma pessoas na <b>MEIA IDADE</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                resposta.innerHTML = `Detectamos uma pessoa na <b>MEIA IDADE</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
                 foto.src = 'foto-meia-idade-f.png'
                 foto.alt = 'Foto: Pessoa na meia idade de 45 até 59 anos'
             }else if(idade >= 60){
