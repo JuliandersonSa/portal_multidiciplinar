@@ -60,6 +60,8 @@ function verificador(){
             if(idade >= 0  && idade < 11){
                 // Criança
                 resposta.innerHTML = `Detectamos uma <b>CRIANÇA </b> do sexo <b>${sexo} com <b>${idade} anos de idade`
+                foto.style.width = '300px'
+                foto.style.borderRadius = '50%'
                 foto.src = 'foto-crianca-f.png'
                 foto.alt = 'Foto: Criança de 0 até 10 anos'
             }else if(idade >= 11 && idade < 16){
@@ -70,6 +72,7 @@ function verificador(){
             }else if(idade >= 16 && idade < 26){
                 // Jovem
                 resposta.innerHTML = `Detectamos uma <b>JOVEM</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.style.width = '300px'
                 foto.src = 'foto-jovem-f.png'
                 foto.alt = 'Foto: Jovem de 16 até 25 anos'
             }else if(idade >= 26 && idade < 45){
