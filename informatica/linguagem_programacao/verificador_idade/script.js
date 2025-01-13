@@ -49,6 +49,8 @@ function verificador(){
             }else if(idade >= 60){
                 //Idoso
                 resposta.innerHTML = `Detectamos uma pessoa <b>IDOSA</b> do sexo <b>${sexo}</b> com <b>${idade}</b> anos de idade`
+                foto.style.width = '300px'
+                foto.style.borderRadius = '50%'
                 foto.src = 'foto-idoso-m.png'
                 foto.alt = 'Foto: Pessoa idosa acima de 59 anos'
             }
