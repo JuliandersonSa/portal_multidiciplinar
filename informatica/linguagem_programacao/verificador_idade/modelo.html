@@ -14,11 +14,26 @@
     <!-- seção principal que contém o formulário -->
     <section>
         <div>
-            <p>Ano de Nascimento:
+            <p>
+                <!-- O elemento <label> é usado para descrever o campo de entrada abaixo dele.
+                Atributo "for" conecta o <label> ao <input> com o ID correspondente,
+                permitindo que o <label> seja clicado para focar no campo. -->
+                <label for="txtano">Ano de Nascimento:</label>
+
+                <!-- Atributo "type='number'" limita a entrada a números.
+                Atributo "name" é usado para identificar o campo no envio do formulário.
+                Atributo "id" conecta o campo ao <label> acima.
+                Atributo "min='0'" impede que valores negativos sejam inseridos. -->
                 <input type="number" name="txtano" id="txtano" min="0">
             </p>
-            <p>Sexo:
-                <!-- Botão de seleção para "Masculino" -->           <input type="radio" name="nome_radio_genero" id="id_radio_masculino" checked>
+            <p>Sexo: 
+                 <!-- OBS:
+                    O atributo "checked" marca um campo de entrada (radio ou checkbox) como selecionado por padrão.
+                    - Em "radio", apenas uma opção pode ser selecionada por vez.
+                    - Em "checkbox", múltiplas opções podem ser selecionadas.
+                -->  
+                <!-- Botão de seleção para "Masculino" -->        
+                <input type="radio" name="nome_radio_genero" id="id_radio_masculino" checked>
                 <!-- Texto associado ao botão "Masculino" -->
                 <label for="id_radio_masculino">Masculino</label>
                 <!-- Botão de seleção para "Feminino" -->
