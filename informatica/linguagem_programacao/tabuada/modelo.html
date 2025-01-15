@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    
+    <section>
+        <div>
+            <label for="numero-formulario"><b>Número:</b></label>
+            <input type="number" name="numero-formulario" id="numero-formulario">
+            <input type="button" value="Gerar Tabuada" id="gerar_tabuada" onclick="gerar_tabuada()">
+        </div>
+        
+        <section id="caixa-selecao">
+            <p id="paragrafo-subtitulo"><b>Digite um número acima</b>
+            </p> 
+
+            <div id="resultado">
+                A tabuada vai aparecer aqui
+            </div>
+           
+        </section>
+       
+    </section>
+    
+    <footer>
+        <p>&copy; Julianderson Sá</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="botao-voltar">
+        <a href="../javascript.html" id="botao">Voltar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body{
+    background: rgb(77, 77, 241);
+    font: normal 15pt arial;
+}
+
+header{
+    color: aliceblue;
+    text-align: center;
+}
+
+section{
+    background: white;
+    padding: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.58);
+}
+
+footer{
+    color: aliceblue;
+    font-style: italic;
+    text-align: center;
+}
+
+#caixa-selecao{
+    padding: 100pt 15pt;
+    margin-left: -38pt;
+    margin-top: 20pt;
+    background-color: aquamarine;
+    height: 180px;
+    width: 207px;
+}
+
+#paragrafo-subtitulo{
+    margin-top: -90pt;
+    margin-left: -26px;
+    margin-right: -20px;
+}
+
+#resultado{
+    width: 200px;
+    height: 300px;
+    overflow: auto;
+    background-color: antiquewhite;
+    margin-top: 50pt;
+    border-radius: 10px;
+}
+
+#botao-voltar{
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+#botao{
+  background-color: aliceblue;
+  text-decoration: none;
+  border-radius: 5px;
+}
