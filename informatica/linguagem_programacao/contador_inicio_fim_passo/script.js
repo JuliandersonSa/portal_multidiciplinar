@@ -9,8 +9,11 @@ function contador(){
     var resposta = document.getElementById('resposta')
     // Se qualquer um dos formularios estiver vazio a variável resposta alerta o usuário
     if((inicio.value.length) == 0 || (fim.value.length) == 0 || (passo.value.length) == 0){
+        window.alert('[ERRO] Valor inválido!')
+        resposta.style.color = 'red'
         resposta.innerHTML = '<b>Preencha corretamente todos os 3 campos acima</b>'
     }else{
+        resposta.style.color = 'black'
         // Adicionando valores do tipo número nas variáveis i, f e p no js
         var i = Number(inicio.value)
         var f = Number(fim.value)
