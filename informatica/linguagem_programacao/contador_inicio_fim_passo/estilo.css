@@ -10,16 +10,12 @@ header{
 
 section{
     background: white;
-    padding: 50px;
+    padding: 0px;
     width: 300px;
     border-radius: 10px;
     margin: auto;
     text-align: center;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.58);
-}
-
-div{
-
 }
 
 footer{
@@ -57,4 +53,16 @@ footer{
 
 #resposta{
     padding-top: 20px;
+}
+
+#caixa-botao{
+    text-align: center;
+}
+
+#botao{
+    background-color: aliceblue;
+    border-radius: 5px;
+    font: normal 20pt arial;
+    text-decoration: none;
+    padding: 1px;
 }
