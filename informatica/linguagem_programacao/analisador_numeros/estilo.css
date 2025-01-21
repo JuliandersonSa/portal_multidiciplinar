@@ -59,3 +59,14 @@ footer{
     font: normal 15pt arial;
     border-radius: 5pt;
 }
+
+#divbotao{
+    text-align: center;
+}
+
+#abotao{
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 5pt;
+}
