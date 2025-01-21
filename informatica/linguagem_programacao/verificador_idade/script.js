@@ -116,7 +116,7 @@ function verificador(){
             }else if(idade >= 26 && idade < 45){
                 // Adulto
                 resposta.innerHTML = `Detectamos uma pessoa <b>ADULTA</b> com <b>${idade}</b> anos de idade`
-                foto.style.width = '250px'
+                foto.style.width = '200px'
                 foto.style.borderRadius = '50%'
                 foto.src = 'foto-pessoas3.png'
                 foto.alt = 'Foto: Várias pessoas em um parque de dia'
