@@ -12,7 +12,7 @@ section{
     background: white;
     padding: 50px;
     width: 200pt;
-    height: 235pt;
+    height: 315pt;
     border-radius: 10px;
     margin: auto;
     text-align: center;
@@ -28,9 +28,11 @@ footer{
 #resposta{
     text-align: left;
     margin-left: -35pt;
-    width: 220pt;
+    width: 270pt;
+    height: 100pt;
     background-color: bisque;
     border-radius: 5pt;
+    overflow: auto;
 }
 
 #selecao{
