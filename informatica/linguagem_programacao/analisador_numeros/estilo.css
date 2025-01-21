@@ -11,7 +11,8 @@ header{
 section{
     background: white;
     padding: 50px;
-    width: 200px;
+    width: 200pt;
+    height: 235pt;
     border-radius: 10px;
     margin: auto;
     text-align: center;
@@ -35,6 +36,9 @@ footer{
 #selecao{
     background-color: bisque;
     border-radius: 5pt;
+    width: 150px;
+    height: 150px;
+    margin-top: -18pt;
 }
 
 #adicionar{
@@ -69,4 +73,8 @@ footer{
     background-color: aliceblue;
     padding: 5px;
     border-radius: 5pt;
+}
+
+#div-principal{
+    margin-top: -35pt;
 }
