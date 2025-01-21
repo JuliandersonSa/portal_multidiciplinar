@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="formulario_numero1a100">Número (1 à 100)</label>
+            <input type="number" name="formulario_numero1a100" id="formulario_numero1a100">
+            <input type="button" value="Adicionar" id="adicionar" onclick="adicionar()">
+            <br><br><select name="selecao" id="selecao" size="6"></select>
+            <br><input type="button" value="Finalizar" id="finalizar" onclick="finalizar()">
+        </div>
+        <br>
+        <div id="resposta">
+            Resposta aqui
+        </div>
+        <div id="resposta2">
+
+        </div>
+        <br>
+        <input type="button" value="Limpar tudo" 
+        id="limpar" onclick="limpar()">
+
+    </section>
+    
+    <footer>
+        <p>&copy; Julianderson Sá</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

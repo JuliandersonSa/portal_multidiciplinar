@@ -1,0 +1,61 @@
+body{
+    background: rgb(96, 153, 153);
+    font: normal 15pt arial;
+}
+
+header{
+    color: aliceblue;
+    text-align: center;
+}
+
+section{
+    background: white;
+    padding: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.58);
+}
+
+footer{
+    color: aliceblue;
+    font-style: italic;
+    text-align: center;
+}
+
+#resposta{
+    text-align: left;
+    margin-left: -35pt;
+    width: 220pt;
+    background-color: bisque;
+    border-radius: 5pt;
+}
+
+#selecao{
+    background-color: bisque;
+    border-radius: 5pt;
+}
+
+#adicionar{
+    background-color: blue;
+    color: aliceblue;
+    font: 15pt arial;
+    border-radius: 5pt;
+    margin-top: 5px;
+}
+
+#finalizar{
+    background-color: blue;
+    color: aliceblue;
+    font: 15pt arial;
+    border-radius: 5pt;
+    margin-top: 5px;
+}
+
+#limpar{
+    background-color: blue;
+    color: aliceblue;
+    font: normal 15pt arial;
+    border-radius: 5pt;
+}
