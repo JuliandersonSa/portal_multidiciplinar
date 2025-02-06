@@ -28,9 +28,21 @@ function loadQuestions() {
                 comment: row.c[6] ? row.c[6].v : '' // Comentário opcional
             }));
 
+            // Embaralha as questões
+            questions = shuffleArray(questions);
+
             loadQuestion(); // Carrega a primeira questão
         })
         .catch(error => console.error('Erro ao buscar dados:', error)); // Trata erros na requisição
+}
+
+// Função para embaralhar um array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 // Função para carregar e exibir a questão atual
@@ -43,10 +55,10 @@ function loadQuestion() {
         questionContainer.innerHTML = `
             <strong>Questão ${currentQuestionIndex + 1}:</strong> ${question.question}
             <ul>
-                <li>A) ${question.options.A}</li>
-                <li>B) ${question.options.B}</li>
-                <li>C) ${question.options.C}</li>
-                <li>D) ${question.options.D}</li>
+                <li onclick="submitAnswer('A')">A) ${question.options.A}</li>
+                <li onclick="submitAnswer('B')">B) ${question.options.B}</li>
+                <li onclick="submitAnswer('C')">C) ${question.options.C}</li>
+                <li onclick="submitAnswer('D')">D) ${question.options.D}</li>
             </ul>
         `;
         document.getElementById('result').innerHTML = ""; // Limpa resultados anteriores
@@ -63,7 +75,7 @@ function submitAnswer(selected) {
 
     if (selected === question.answer) { // Verifica se a resposta está correta
         score++; // Incrementa a pontuação se a resposta estiver correta
-        result.innerHTML = `<span style="color: green; font-weight: bold;">Correto!</span><br>`; //Exibe mensagem de acerto; // Exibe mensagem de acerto
+        result.innerHTML = `<span style="color: green; font-weight: bold;">Correto!</span><br>`; // Exibe mensagem de acerto
     } else {
         result.innerHTML = `<span style="color: red; font-weight: bold;">Incorreto!</span><br>`; // Exibe mensagem de erro se a resposta estiver errada
     }
@@ -84,3 +96,6 @@ function showResult() {
     const percentage = (score / questions.length) * 100; // Calcula a porcentagem de acertos
     result.innerHTML = `Você respondeu ${score} de ${questions.length} questões corretamente. Sua porcentagem de acerto é ${percentage.toFixed(2)}%.`; // Exibe o resultado final ao usuário
 }
+
+// Carregar as questões quando a página for carregada
+window.onload = loadQuestions;

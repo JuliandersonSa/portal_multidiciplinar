@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legislação de Trânsito</title>
+    <link rel="stylesheet" href="disciplinas_ctb.css">
+</head>
+<body>
+    <header>
+        <h1>Questões de Legislação de Trânsito</h1>
+    </header>
+    
+    <input type="text" id="searchBar" placeholder="Buscar disciplina..." onkeyup="searchDisciplinas()">
+
+    <div id="disciplinasContainer" class="disciplinas-container">
+        <!-- As disciplinas são geradas dinamicamente via JavaScript -->
+    </div>
+
+    <div class="pagination">
+        <button onclick="changePage(-1)">Anterior</button>
+        <button onclick="changePage(1)">Próximo</button>
+    </div>
+    
+    <!-- Botão para voltar -->
+	<div class="button-container">
+		<a href="../legislacao_transito.html" class="button">Voltar</a>
+	</div>
+
+    <script src="disciplinas_ctb.js"></script>
+</body>
+</html>

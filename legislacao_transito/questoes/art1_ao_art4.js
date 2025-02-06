@@ -1,4 +1,4 @@
-const sheetId = '1uxIEPY5c_kaKa4-mFJTtOJqarbLS3LCQrOq6WYbxlqU'; // ID da sua planilha
+const sheetId = '1Q5EZ6Rjasg8DYCQvPJqM-pjzZhukzWpZHha1Oko2HEA'; // ID da sua planilha
 const proxyUrl = 'https://corsproxy.io/?'; // Usando CORS Proxy
 const url = `${proxyUrl}https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`; // URL para acessar os dados da planilha
 
@@ -99,6 +99,3 @@ function showResult() {
 
 // Carregar as questões quando a página for carregada
 window.onload = loadQuestions;
-
-
-// 1uxIEPY5c_kaKa4-mFJTtOJqarbLS3LCQrOq6WYbxlqU

@@ -1,7 +1,5 @@
 const disciplinas = [
-    {name: 'Hardware e Software', url: 'hardware_software.html'},
-    {name: 'Internet', url: 'internet.html'},
-    {name: 'Windows', url: 'windows.html'}
+    {name: 'Art 1° ao Art 4°', url: 'art1_ao_art4.html'}
 ];
 
 let currentPage = 0;
@@ -55,4 +53,3 @@ function searchDisciplinas() {
 
 // Inicializa a primeira página
 renderPage();
-

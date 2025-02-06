@@ -1,5 +1,8 @@
 const disciplinas = [
-    'colocacao_pronominal', 'concordancia_verbal', 'formacao_das_palavras','classe_gramatical'
+    {name: 'Colocação Pronominal', url: 'colocacao_pronominal.html'},
+    {name: 'Concordância Verbal', url: 'concordancia_verbal.html'},
+    {name: 'Formação das Palavras', url: 'formacao_das_palavras.html'},
+    {name: 'Classes Gramaticais', url: 'classe_gramatical.html'}
 ];
 
 let currentPage = 0;
@@ -12,11 +15,11 @@ function renderPage() {
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
 
-    disciplinas.slice(start, end).forEach(name => {
+    disciplinas.slice(start, end).forEach(disciplina => {
         const link = document.createElement('a');
-        link.href = `${name.toLowerCase().replace(/ /g, '_')}.html`;
+        link.href = disciplina.url;
         link.className = 'disciplina';
-        link.textContent = name;
+        link.textContent = disciplina.name;
         container.appendChild(link);
     });
 
@@ -37,19 +40,20 @@ function updatePaginationButtons() {
 
 function searchDisciplinas() {
     const query = document.getElementById('searchBar').value.toLowerCase();
-    const filteredDisciplinas = disciplinas.filter(name => name.toLowerCase().includes(query));
+    const filteredDisciplinas = disciplinas.filter(disciplina => disciplina.name.toLowerCase().includes(query));
 
     const container = document.getElementById('disciplinasContainer');
     container.innerHTML = '';
 
-    filteredDisciplinas.forEach(name => {
+    filteredDisciplinas.forEach(disciplina => {
         const link = document.createElement('a');
-        link.href = `${name.toLowerCase().replace(/ /g, '_')}.html`;
+        link.href = disciplina.url;
         link.className = 'disciplina';
-        link.textContent = name;
+        link.textContent = disciplina.name;
         container.appendChild(link);
     });
 }
 
 // Inicializa a primeira página
 renderPage();
+
