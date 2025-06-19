@@ -13,7 +13,7 @@ Fornecer um ambiente de aprendizagem simples e organizado para várias áreas do
 - `estilo.global.css`: estilos globais das páginas
 - `script.js`: funcionalidades de navegação
 - Pastas de disciplinas:
-  - `informatica/`: projetos em Java (com código fonte e binários)
+  - `informatica/`: Aulas e Questões, projetos em HTML, CSS, JavaScript e Java
   - `matematica/`: atividades e explicações
   - `portugues/`: conteúdo gramatical
   - `geografia.maranhao/`: material regional
