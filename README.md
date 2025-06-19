@@ -26,6 +26,7 @@ Fornecer um ambiente de aprendizagem simples e organizado para várias áreas do
 - CSS3
 - JavaScript básico
 - Java (projetos organizados em `src/` e `bin/`)
+- IDE Geany
 
 ## 🚀 Como Visualizar Localmente
 
